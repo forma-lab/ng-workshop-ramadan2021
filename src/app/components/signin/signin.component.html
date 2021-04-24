@@ -1,0 +1,14 @@
+<div class="text-center main">
+    <form class="form-signin" (ngSubmit)="signin()">
+        <img class="mb-4" src="assets/images/logo_formalab_ca.png" alt="" width="72" height="72">
+
+        <h1 class="h3 mb-3 font-weight-normal">Enter your Pseudo</h1>
+
+        <input type="text" [(ngModel)]="_pseudo" name="pseudo" class="form-control" placeholder="Pseudo">
+        <p *ngIf="_error" class="text-danger text-left">pseudo is required</p>
+
+        <button class="btn btn-lg btn-primary btn-block mt-3" type="submit">Sign in</button>
+
+        <p class="mt-5 mb-3 text-muted">&copy; Workshop Ramadan - 2021</p>
+    </form>
+</div>
