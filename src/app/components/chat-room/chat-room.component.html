@@ -32,31 +32,17 @@
             </div>
 
             <div class="mesgs">
-                <div class="msg_history">
-
-                    <div class="outgoing_msg">
-                        <div class="sent_msg">
-                            <p><b>Ayoub : </b>Bonjour</p>
-                            <span class="time_date">Sat, 24 Apr 2021 02:01:15 GMT</span>
-                        </div>
-                    </div>
-
-                    <div class="incoming_msg">
-                        <div class="received_msg">
-                            <div class="received_withd_msg">
-                                <p><b>Ali : </b>Bonjour</p>
-                                <span class="time_date">Sat, 24 Apr 2021 02:01:15 GMT</span>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="msg_history" [innerHTML]="_messages">
 
                 </div>
 
                 <div class="type_msg">
                     <div class="input_msg_write">
-                        <input name="message" type="text" placeholder="Type a message" />
+                        <input [(ngModel)]="_message" (keyup.enter)="sendMessage()" name="message" type="text"
+                            placeholder="Type a message" />
 
-                        <button class="msg_send_btn" type="button">
+                        <button class="msg_send_btn" type="button" (click)="sendMessage()">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
