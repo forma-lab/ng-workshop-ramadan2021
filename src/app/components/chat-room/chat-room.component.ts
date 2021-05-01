@@ -20,7 +20,7 @@ export class ChatRoomComponent implements OnInit {
   public _message = ""
   public _messages = ""
 
-  private socket = io("http://localhost:3000/")
+  private socket = io("https://api-workshop-ramadan2021.herokuapp.com/")
   private _pseudo = ""
 
   constructor(private _router: Router) { }
